@@ -1,7 +1,19 @@
-select *  from Portfolio..Covid_Deaths where continent is not null  order by 3,4
+/*
+Covid 19 Data Exploration 
 
-select * from Portfolio..Covid_Vaccination order by 3,4  
+Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
 
+*/
+
+-- Select Data that we are going to be starting with
+select *  from Portfolio..Covid_Deaths 
+where continent is not null  
+order by 3,4
+
+select * from Portfolio..Covid_Vaccination 
+order by 3,4  
+
+-- Altering column data types
 alter table portfolio..covid_deaths alter column total_cases numeric(15,5)
 alter table portfolio..covid_deaths alter column total_deaths numeric(15,5)
 
